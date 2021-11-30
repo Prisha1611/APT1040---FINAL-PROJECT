@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/49aca2c428.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg3">
+        <header>
+            <a href="index.html" class="logo"><span>H</span>oliday&nbsp;&nbsp;<span>H</span>yper<span>M</span>arket</a>
+            <div class="group">
+                <ul class="navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li ><a href="destinations.html">Destinations</a></li>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <ul class="action">
+                    <li><a href="login.html"><ion-icon name="person-outline"></ion-icon></a></li>
+                </ul>
+            </div>
+        </header>
+        <div id="hero">
+            <div class="navbar">
+                <img src="/images/logo.png" class="logo">
+                         </div>
+            <div class="container">
+                <div class="info">
+                    <h1>DISCOVER</h1>
+                    <p>Our travel agency has been rated by several tour statictical companies as one of the best in the East African region.<br> In addition to this, the positive reviews of the customers confirm why we are a first priority to tourists worldwide for an ultimate experience when touring East AFRICA</p>
+                    <input type="text" placeholder="Search">
+                </div>
+                
+            </div>
+            <div class="slider">
+                <img src="/images/left-arrow.png" id="prev">
+                <div class="preview">
+                    <img src="/images/small1.png" class="active thumbnail">
+                    <img src="/images/small2.png" class="thumbnail">
+                    <img src="/images/small3.png" class="thumbnail">
+                    <img src="/images/small4.png" class="thumbnail">
+                    <img src="/images/small5.png" class="thumbnail">
+                </div>
+                <img src="/images/right-arrow.png" id="next">
+            </div>
+        </div>
+        <script>
+            var prev= document.getElementById("prev");
+            var next= document.getElementById("next");
+            var thumbnail= document.getElementsByClassName("thumbnail");
+            var hero= document.getElementById("hero");
+            var backgroundimg=new Array(
+                "/images/bg1.png",
+                "/images/bg2.png",
+                "/images/bg3.png",
+                "/images/bg4.png",
+                "/images/bg5.png",
+ 
+            );
+            let i=0;
+            next.onclick=function(){
+                if(i<4){
+             hero.style.backgroundImage ='url("'+backgroundimg[i+1]+'")';
+             thumbnail[i+1].classList.add("active");
+             thumbnail[i].classList.remove("active");
+             i++;}
+            }
+            prev.onclick=function(){
+                if(i>0){
+             hero.style.backgroundImage ='url("'+backgroundimg[i-1]+'")';
+             thumbnail[i-1].classList.add("active");
+             thumbnail[i].classList.remove("active");
+             i--;}
+            }
+ 
+        </script>
+</div>
+   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
